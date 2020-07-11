@@ -16,6 +16,9 @@ public class Auto{
 	/*Name of class*/
 	private int power;
 	private int year;
+	private int diameter;
+	private String material;
+	private int cilinders;
 	private Wheel wheel;	
 	private Engine  engine;
 
@@ -28,9 +31,9 @@ public class Auto{
 		this.year = setYear();
 		this.wheel = wheel;
 		this.engine = engine;
-		int diameter  = wheel.setDiameter();	    
-	    String material = wheel.setMaterial();
-	    int cilinders = engine.setCilinders();
+		this.diameter = wheel.setDiameter();	    
+	    this.material = wheel.setMaterial();
+	    this.cilinders = engine.setCilinders();
 	    
 		
 		
@@ -48,6 +51,22 @@ public class Auto{
 	public int setYear() {
 		year = new Random().nextInt(2020 - 1980) + 1980;
 		return year;
+	}
+	
+	public int getDiameter() {
+		return diameter;
+	}
+	public String getMaterial() {
+		return material;
+	}
+	public int getCilinders() {
+		return cilinders;
+	}
+	public Wheel getWheel() {
+		return wheel;
+	}
+	public Engine getEngine() {
+		return engine;
 	}
 	@Override
 	public String toString() {

@@ -16,8 +16,11 @@ public class Wheel {
 	/*Name of class*/
 	private int diameter ;
 	private String material;
-	String [] materialArray = {"ALKANTARA", " LEATHER", "NINYL", " PLASTIC", " WOOD"};
+	String [] materialArray = {"ALKANTARA", " LEATHER", "VINYL", " PLASTIC", " WOOD"};
 	public Wheel() {	
+		this.diameter = diameter;
+		this.material = material;
+		this.materialArray = materialArray;
 	}
 	public int getDiameter() {
 		return diameter;
