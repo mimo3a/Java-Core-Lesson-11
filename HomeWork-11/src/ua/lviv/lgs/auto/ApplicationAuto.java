@@ -28,7 +28,7 @@ public class ApplicationAuto {
 
 		for (int i = 0; i < firstLength; i++) {
 			for (int j = 0; j < secondLength; j++) {
-				Auto auto = new Auto();
+				Auto auto = new Auto(new Wheel(), new Engine());
 				autoArray[i][j] = auto;
 			}
 		}
@@ -38,13 +38,14 @@ public class ApplicationAuto {
 		System.out.println("Натисніть 1 щоб вивести значення всього масиву");
 		System.out.println("Натисніть 2 щоб заповнити масив однаковими значеннями");
 		while (true) {
+			@SuppressWarnings("resource")
 			Scanner sc = new Scanner(System.in);
 			int number = sc.nextInt();
 			if (number == 1) {
 				System.out.println(Arrays.deepToString(autoArray));
 			}
 			if (number == 2) {
-				Auto a1 = new Auto();
+				Auto a1 = new Auto(new Wheel(), new Engine());
 				for (Auto[] ar : autoArray) {
 					Arrays.fill(ar, a1);
 				}

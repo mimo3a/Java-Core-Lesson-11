@@ -2,6 +2,8 @@
 
 package ua.lviv.lgs.auto;
 
+import java.util.Arrays;
+
 /***
  * @since java 1.8
  * @author mimo3a
@@ -29,6 +31,12 @@ public class Engine {
 		cilinders = cilindersArray[new Random().nextInt(cilindersArray.length)];
 		return cilinders;
 	}
+
+	@Override
+	public String toString() {
+		return "Engine [cilinders=" + cilinders  + "]";
+	}
+	
 	
 	
 
